@@ -1,0 +1,330 @@
+
+@media screen and (max-width: 992px) {
+#myCarousel p {
+
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+   
+
+}
+.text {
+
+    background-color: #ffff;
+    color: black;
+    font-size: 12px!important;
+    padding: 10px 10px!important;
+    }
+    .middle
+    {
+        width: 60%!important;
+
+    }
+#myCarousel h4 {
+
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #ffff;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-left: -120px;
+    text-align: center;
+
+}
+#myCarousel {
+
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(rgba(37, 41, 48, 0.64),rgba(29, 37, 66, 0.74)),url(../images/photo-1437422061949-f6efbde0a471.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 67px;
+    height: 472px;
+
+}
+.card2 {
+
+    width: 196px!important;
+    }
+.about p {
+
+    font-size: 13px;
+    line-height: 1.3em;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: -34px;
+
+}
+.about h1 {
+
+    font-family: "Helvetica Neue",sans-serif;
+    color: #e87d22;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: -25px;
+
+}
+.image1 {
+
+    display: block;
+    width: 100%;
+    height: 160px;
+    border-radius: 2px;
+
+}
+.carrier h4 {
+
+    font-family: "Helvetica Neue",sans-serif;
+    color: #fd261c;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    font-size: 20px;
+
+}
+p {
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 13;
+
+}
+nav ul li {
+
+    display: inline-block;
+    padding: 16px 8px;
+
+}
+.services h2 {
+
+    font-size: 20px;
+
+}
+.icon {
+
+    text-align: center;
+    color: #e87d22;
+    font-size: 44px;
+    padding: 8%;
+
+}
+.icon1 {
+
+    text-align: center;
+    color: #e87d22;
+    font-size: 44px;
+    padding: 8%;
+
+}
+.contact-footer {
+
+    background: linear-gradient(rgba(246, 143, 28, 0.85),rgba(236, 114, 25, 0.95));
+    height: 200px;
+    height: auto;
+
+}
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .services h2 {
+
+    font-size: 15px;
+    font-weight: bold;
+
+}
+.menu-icon {
+
+
+    background: #f59223;
+   
+
+}
+.services p {
+
+    font-size:10px;
+    line-height: 1.4em;
+
+}
+
+
+.text {
+
+    background-color: #ffff;
+    color: black;
+    font-size: 12px!important;
+    padding: 6px 6px!important;
+    }
+    .middle
+    {
+        width: 76%!important;
+        
+    }
+element {
+
+}
+
+
+
+.testimonial .description {
+
+    font-size: 12px;
+    color: #fff;
+    line-height: 16px;
+    text-align: center;
+
+}
+.card2 {
+
+    width: 146px !important;
+
+height: 169px!important;
+
+padding: 0px!important;
+    }
+
+    .imgteam {
+
+    width: 100% !important;
+    margin-top: -76px!important;
+
+}
+.logo {
+
+    position: fixed;
+    top: 0;
+    margin-top: 0px;
+
+}
+#myCarousel {
+
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(rgba(37, 41, 48, 0.64),rgba(29, 37, 66, 0.74)),url(../images/photo-1437422061949-f6efbde0a471.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 37px;
+    height: 472px;
+
+}
+#myCarousel .carousel-item .mask img {
+
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    w: m;
+    margin-top: -102px;
+
+}
+.content {
+
+    margin: 1em auto;
+    width: 90%;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+
+}
+.image1 {
+
+    display: block;
+    width: 100%;
+    height: 270px;
+    border-radius: 2px;
+
+}
+.gmap {
+
+    position: relative;
+    right: 0px;
+    top: 1px;
+    width: 100%;
+    height: 389px;
+
+}
+.contact-footer {
+
+    background: linear-gradient(rgba(246, 143, 28, 0.85),rgba(236, 114, 25, 0.95));
+    height: 200px;
+    height: auto;
+
+}
+.image1 {
+
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-radius: 2px;
+
+}
+}
+@media screen and (max-width: 420px) {
+    
+        #myCarousel h4 {
+font-size: 22px;
+   
+    margin-left: 0px;
+    text-align: center;
+
+}
+
+.imgteam {
+
+    width: 100% !important;
+    margin-top: -97px !important;
+}
+
+    .card2 {
+
+    width: 196px !important;
+
+margin-top: 12px !important;
+height: 190px!important;
+margin-bottom: 110px;
+
+    }
+    .team-back
+    {
+        height: 963!important;
+    }
+#myCarousel p {
+
+    font-size: 10px;
+   
+    text-align: center;
+    margin-left: 0px;
+    }
+    .card{
+        margin-top: 10px;
+    }
+    .carrier
+    {
+        margin-bottom: 10px;
+    }
+    nav ul
+    {
+        padding-right: 0;
+         background: #ef9a3c;
+    }
+    
+    nav ul li {
+
+    display: inline-block;
+    padding: 0px 0px;
+    text-align: center;
+
+}
+nav ul li:hover
+{
+    background-color: #f99424e6;
+    co
+}

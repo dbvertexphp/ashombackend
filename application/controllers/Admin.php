@@ -952,32 +952,34 @@ class Admin extends CI_Controller
     $industry = $this->input->post("industry");
   
  if($RIC !==''){
-  echo"hello";die();
-    $datas = array(
-      'stockname'      => $RIC,
-      'symbolticker' => $SymbolTicker,
-      'industry'    => $industry
-);
+  $RIC = $this->input->post("RIC");
+        $SymbolTicker = $this->input->post("SymbolTicker");
+        $industry = $this->input->post("industry");
 
-$data_string = json_encode($datas);
+        $curl = curl_init();
 
-$curl = curl_init('https://13.127.45.140/add/industy/symbolticker/posts');
-
-curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
-
-curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-'Content-Type: application/json',
-'Content-Length: ' . strlen($data_string))
-);
-
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // Make it so the data coming back is put into a string
-curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);  // Insert the data
-
-// Send the request
-$result = curl_exec($curl);
-
-// Free up the resources $curl is using
-curl_close($curl);
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => 'http://13.127.45.140/add/industy/symbolticker',
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => '',
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => 'PUT',
+          CURLOPT_POSTFIELDS =>'{
+            "stockname": "'.$RIC.'",
+            "symbolticker":"'.$SymbolTicker.'",
+            "industry":"'.$industry.'"
+        }',
+          CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json'
+          ),
+        ));
+        
+        $response = curl_exec($curl);
+        
+        curl_close($curl);
 
 
  }
@@ -1029,35 +1031,37 @@ curl_close($curl);
           $SymbolTicker = $this->input->post("SymbolTicker");
           $industry = $this->input->post("industry");
         
-       if($RIC!==''){
-       
-          $datas = array(
-            'stockname'      => $RIC,
-            'symbolticker' => $SymbolTicker,
-            'industry'    => $industry
-      );
-      
-      $data_string = json_encode($datas);
-      
-      $curl = curl_init('https://13.127.45.140/add/industy/symbolticker');
-      
-      curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
-      
-      curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-      'Content-Type: application/json',
-      'Content-Length: ' . strlen($data_string))
-      );
-      
-      curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // Make it so the data coming back is put into a string
-      curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);  // Insert the data
-      
-      // Send the request
-      $result = curl_exec($curl);
-      
-      // Free up the resources $curl is using
-      curl_close($curl);
-      
-      
+       if($RIC!==''){  
+        $RIC = $this->input->post("RIC");
+        $SymbolTicker = $this->input->post("SymbolTicker");
+        $industry = $this->input->post("industry");
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => 'http://13.127.45.140/add/industy/symbolticker',
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => '',
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => 'PUT',
+          CURLOPT_POSTFIELDS =>'{
+            "stockname": "'.$RIC.'",
+            "symbolticker":"'.$SymbolTicker.'",
+            "industry":"'.$industry.'"
+        }',
+          CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json'
+          ),
+        ));
+        
+        $response = curl_exec($curl);
+        
+        curl_close($curl);
+        //echo $response;die();
+
        }
           if (!empty($_FILES['imagefile']['name'])) {
             $config['upload_path'] = "./uploads/company_logo/";

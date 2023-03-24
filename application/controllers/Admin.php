@@ -557,6 +557,8 @@ class Admin extends CI_Controller
          facebook_post($message, 'https://ashom.app', 'https://ashom.app/assets/images/financialsocial.png');
 		     //linkedin_news_post($message, 'https://ashom.app', 'https://ashom.app/assets/images/financialsocial.png');
           //twitter_post($message, 'https://ashom.app', 'https://ashom.app/assets/images/financialsocial.png');
+          instagram_post($message, 'https://ashom.app', 'https://ashom.app/assets/images/financialsocial.png');
+          
           if ($isNotificationActive) {
             $notify_data = array();
             $notify_data['notification_type'] = $n_type;
@@ -731,6 +733,7 @@ class Admin extends CI_Controller
   }
   public function adddocument()
   {
+    instagram_post('hello','https://ashom.app', 'https://ashom.app/assets/images/financialsocial.png');
     $data = $this->input->post();
    
     if (!empty($data)) {
@@ -797,6 +800,8 @@ class Admin extends CI_Controller
           //die();
           //twitter_post($message, 'https://ashom.app', 'https://ashom.app/assets/images/financialsocial.png');
          // die();
+          instagram_post($message, 'https://ashom.app', 'https://ashom.app/assets/images/financialsocial.png');
+         
           $NotificationData = array();
           $company_data = $this->db->select("*, CONCAT('https://www.ashom.app', image) as image")->get_where("companies", ["id" => $company_id])->row_array();
           $c_dat[0]["Company_payload"] =  $company_data;

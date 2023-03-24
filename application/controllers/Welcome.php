@@ -127,6 +127,7 @@ for($i=2; $i<count($files); $i++){
       $this->db->insert_batch('notifications', $NotificationData);
       echo linkedin_news_post($news->title, $news->link, $news->image_url);
       echo twitter_post($news->title, $news->link, $news->image_url);
+      echo facebook_post($news->title, $news->link, $news->image_url);
 
   }
 

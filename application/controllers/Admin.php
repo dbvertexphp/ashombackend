@@ -28,6 +28,7 @@ class Admin extends CI_Controller
 
   public function index()
   {
+    
     $this->load->view('login');
   }
 
@@ -1454,4 +1455,5 @@ class Admin extends CI_Controller
       $this->load->view("user_analytics", ['admin_detail' => $admin_detail]);
     }
   }
+
 }

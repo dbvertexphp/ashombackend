@@ -2179,5 +2179,14 @@ public function getdatabyric_get($ric_name="", $time_stamps=5){
     $data = $this->db->query("SELECT DISTINCT event, COUNT(event) as total_events, COUNT(DISTINCT user_id) as total_users FROM `user_events` where date(created_at)>='$start_date' and date(created_at)<='$end_date' GROUP BY event")->result();
     $this->response(['status'=>true, 'data'=>$data], REST_Controller::HTTP_OK );
   }
+
+
+
+  public function auto_subscription_get(){
+    $data = $this->user->get_auto_subscription();
+    $this->response(['status'=>true, 'data'=>$data ], REST_Controller::HTTP_OK );
+
+  }
+
 }
 ?>

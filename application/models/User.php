@@ -180,5 +180,19 @@ public function getLinkedInProfile($code="", $redirect_url=""){
     }
   }
 
+  
+  public function get_auto_subscription()
+  {
+    $this->db->select("*");
+    $this->db->from("subscription");
+    $this->db->where_in('subscription_type', ['Monthly', 'Yearly']);
+    $this->db->where('subscription_token IS NOT NULL');
+    $this->db->order_by('created', "DESC");
+    $query = $this->db->get();
+    $result = $query->result();
+    return $result;
+  }
+
+
 }
 ?>

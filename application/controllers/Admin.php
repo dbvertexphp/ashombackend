@@ -28,6 +28,28 @@ class Admin extends CI_Controller
 
   public function index()
   {
+    //       $packageName ='com.ashomapp';
+//        $productId = 'com.ashom.monthlly.subscription'; 
+// 		   $token = 'joaekkdehjoglnhjkjolgodd.AO-J1OwMCjiVDP2VZPT4NLwn8EPOvLvRUWsGod6bo3nKTo0YSULuyUhAOkXv5YzBoVhxv_FL3-OJNowLZD9VYL-p5V5Ju0OGcA';
+
+//  $client = new Google_Client();
+// $client->setAuthConfig('api_data.json');
+// $client->addScope('https://www.googleapis.com/auth/androidpublisher');
+// $service = new \Google_Service_AndroidPublisher($client);
+// $purchase = $service->purchases_subscriptions->get($packageName, $productId, $token);
+// $purchase->getAutoRenewing();
+// $purchase->getCancelReason();
+
+// $timestamp = $purchase['expiryTimeMillis'];
+// $dateTime = new DateTime("@".floor($timestamp/1000));
+// $dateTime->setTimezone(new DateTimeZone('UTC'));
+// $utcTime = $dateTime->format('Y-m-d H:i:s');
+
+
+// print_r($purchase);
+// print_r($utcTime);
+
+// die();
     
     $this->load->view('login');
   }
@@ -1455,5 +1477,12 @@ class Admin extends CI_Controller
       $this->load->view("user_analytics", ['admin_detail' => $admin_detail]);
     }
   }
+
+  public function auto_subscription_get(){
+    $data = $this->user->get_auto_subscription();
+    $this->response(['status'=>true, 'data'=>$data ], REST_Controller::HTTP_OK );
+
+  }
+
 
 }
